@@ -35,10 +35,9 @@ links = [
 ]
 
 for i, link_data in enumerate(links):
-    bullet = Label(f1, text=".", background="#003872", padx=18, pady=18, borderwidth=3, relief="ridge")
+    bullet = Label(f1, text=".", background="black", padx=18, pady=18, borderwidth=3, relief="ridge")
     bullet.grid(row=i, column=0)
-    linkbutton = Button(f1, text=link_data["text"], command=lambda u=link_data["url"]: openlink(u), padx=10, pady=18,
-                        background="white", width=50, font=("Helvetica", 12, "bold"))
+    linkbutton = Button(f1, text=link_data["text"], command=lambda u=link_data["url"]: openlink(u), padx=10, pady=18, background="white", width=50, font=("Trebuchet MS", 14, "bold"))
     linkbutton.grid(row=i, column=1, padx=10, pady=10)
 
 # Add the frame to the canvas

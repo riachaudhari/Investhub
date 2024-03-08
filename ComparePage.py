@@ -44,17 +44,17 @@ root = Tk()
 root.title("Compare Stocks")
 root.geometry("900x700")
 
-l1 = Label(root, text="Enter Stock Symbol 1:")
+l1 = Label(root, text="Enter Stock Symbol 1:", font=("Trebuchet MS", 12, "bold"))
 l1.pack(pady=10)
-e1 = Entry(root)
+e1 = Entry(root, font=("Trebuchet MS", 12))
 e1.pack(pady=10)
 
-l2 = Label(root, text="Enter Stock Symbol 2:")
+l2 = Label(root, text="Enter Stock Symbol 2:", font=("Trebuchet MS", 12, "bold"))
 l2.pack(pady=10)
-e2 = Entry(root)
+e2 = Entry(root, font=("Trebuchet MS", 12))
 e2.pack(pady=10)
 
-b1 = Button(root, text="Fetch Data", command=fetch_data)
+b1 = Button(root, text="Fetch Data", command=fetch_data, font=("Trebuchet MS", 10, "bold"), width=15, pady=4, background="black", foreground="white")
 b1.pack(pady=10)
 
 

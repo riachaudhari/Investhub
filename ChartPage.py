@@ -68,7 +68,7 @@ indian_symbols = {
 scrollbar = Scrollbar(root)
 scrollbar.pack(side=RIGHT, fill=Y)
 
-listbox = Listbox(root, yscrollcommand=scrollbar.set)
+listbox = Listbox(root, yscrollcommand=scrollbar.set, font=("Trebuchet MS", 12))
 for symbol, name in indian_symbols.items():
     listbox.insert(END, f"{symbol} - {name}")
 

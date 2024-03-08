@@ -1,4 +1,5 @@
 from tkinter import *
+from datetime import datetime
 from newsapi import NewsApiClient
 
 root = Tk()
@@ -37,16 +38,22 @@ def display_news():
         f1.pack(fill="x", padx=10, pady=10)
 
         # Display article title
-        title_label = Label(f1, text=article['title'], font=("Arial", 12, "bold"), wraplength=700, background="white")
+        title_label = Label(f1, text=article['title'], font=("Trebuchet MS", 14, "bold"), wraplength=700, background="white")
         title_label.pack(anchor="w", padx=10, pady=5)
 
         # Display article description
-        description_label = Label(f1, text=article['description'], wraplength=700, background="white")
+        description_label = Label(f1, text=article['description'], wraplength=700, background="white", font=("Trebuchet MS", 12))
         description_label.pack(anchor="w", padx=10, pady=5)
 
         # Display article source
-        source_label = Label(f1, text=f"Source: {article['source']['name']}", background="white")
+        source_label = Label(f1, text=f"Source: {article['source']['name']}", background="white", font=("Trebuchet MS", 10, "italic"))
         source_label.pack(anchor="w", padx=10, pady=5)
+
+        # Display article published date
+        # Format the published date to display only the date
+        published_at = datetime.strptime(article['publishedAt'], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d")
+        date_label = Label(f1, text=f"Published: {published_at}", background="white", font=("Trebuchet MS", 10))
+        date_label.pack(anchor="w", padx=10, pady=5)
 
 
 display_news()

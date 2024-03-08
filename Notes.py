@@ -11,7 +11,7 @@ f1.pack()
 text_scroll = Scrollbar(f1)
 text_scroll.pack(side=RIGHT, fill=Y)
 
-my_text = Text(f1, width=100, height=37, font=("Helvetica", 12), selectbackground="yellow", selectforeground="black", undo=True, yscrollcommand=text_scroll.set)
+my_text = Text(f1, width=100, height=29, font=("Comic Sans MS", 12), selectbackground="light blue", selectforeground="black", undo=True, yscrollcommand=text_scroll.set)
 my_text.pack()
 
 text_scroll.config(command=my_text.yview)
@@ -69,6 +69,7 @@ def save_file():
         statusbar.config(text=f'Saved : {open_status_name}')
     else:
         saveas_file()
+
 
 # File Menu
 file_menu = Menu(my_menu, tearoff=False)

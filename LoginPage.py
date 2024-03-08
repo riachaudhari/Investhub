@@ -47,7 +47,7 @@ def check_cred(username, password):
 
 
 # Frame
-f1 = Frame(root, background="#003872", relief=SUNKEN)
+f1 = Frame(root, background="#003872", relief=SUNKEN, pady=20, padx=20)
 f1.place(anchor=CENTER, relx=0.5, rely=0.5)
 
 
@@ -60,13 +60,13 @@ login_photo.grid(row=0, column=0, columnspan=2)
 # Username
 l1 = Label(f1, text="Username", background="#003872", padx="10", pady="10", foreground="white", font=("Helvetica", 12, "bold"))
 l1.grid(row=1, column=0)
-e1 = Entry(f1, textvariable=name_var, font=("Helvetica", 12))
+e1 = Entry(f1, textvariable=name_var, font=("Helvetica", 14),)
 e1.grid(row=1, column=1, padx="20", pady="10")
 
 # Password
 l1 = Label(f1, text="Password", background="#003872", padx="10", pady="10", foreground="white", font=("Helvetica", 12, "bold"))
 l1.grid(row=2, column=0)
-e1 = Entry(f1, textvariable=pass_var, font=("Helvetica", 12), show="*")
+e1 = Entry(f1, textvariable=pass_var, font=("Helvetica", 14), show="*")
 e1.grid(row=2, column=1, padx="20", pady="10")
 
 # login button

@@ -41,15 +41,15 @@ root = Tk()
 root.title("Stock Information")
 root.geometry("900x700")
 
-l = Label(root, text="Enter Stock Symbol:")
+l = Label(root, text="Enter Stock Symbol:", font=("Trebuchet MS", 12, "bold"))
 l.pack(pady=10)
-e = Entry(root)
+e = Entry(root, font=("Trebuchet MS", 12))
 e.pack(pady=10)
 
-b = Button(root, text="Fetch Data", command=fetch_data)
+b = Button(root, text="Fetch Data", command=fetch_data, font=("Trebuchet MS", 10, "bold"), width=15, pady=4, background="black", foreground="white")
 b.pack(pady=10)
 
-info_text = Text(root)
-info_text.pack(pady=10)
+info_text = Text(root, font=("Trebuchet MS", 12))
+info_text.pack(pady=30)
 
 root.mainloop()
