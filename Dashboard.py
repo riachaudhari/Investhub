@@ -1,5 +1,5 @@
 from tkinter import *
-
+from Flashcard import FlashcardApp # Ensure Flashcard.py is in the same directory or adjust the import path accordingly
 
 root = Tk()
 root.geometry("1550x1000")
@@ -27,7 +27,11 @@ def show_news():
 
 
 def show_games():
-    import Flashcard
+    # import Flashcard
+    game_window = Toplevel(root)
+    game_window.geometry("800x600")
+    app = FlashcardApp(game_window)  # Pass the new window as the parent to FlashcardApp
+
 
 def show_notes():
     import Notes
@@ -53,7 +57,6 @@ s7 = Button(f1, text="Notes", command=show_notes, background="#001F3F", foregrou
 s7.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
 s8 = Button(f1, text="Notifications", background="#001F3F", foreground="white", font=("Helvetica", 15, "bold"), padx="50", pady="50")
 s8.grid(row=3, column=1, columnspan=2, padx=10, pady=10)
-
 
 # Header
 f2 = Frame(root, background="#001F3F", relief=SUNKEN)
