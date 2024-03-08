@@ -1,5 +1,4 @@
 from tkinter import *
-from Flashcard import main as flashcard_main  # Importing the main function from Flashcard.py
 
 
 root = Tk()
@@ -28,7 +27,7 @@ def show_news():
 
 
 def show_games():
-    flashcard_main()
+    import Flashcard
 
 def show_notes():
     import Notes
