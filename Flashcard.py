@@ -4,7 +4,7 @@ from random import randint, choice, shuffle
 
 root = Tk()
 root.title("Games")
-root.geometry("800x600")
+root.geometry("900x700")
 
 my_menu = Menu(root)
 root.config(menu=my_menu)
@@ -116,7 +116,7 @@ def next_word_jumble():
     jumble_answer_label.config(text="")  # Clear answer label
 
 
-menu = Menu(my_menu)
+menu = Menu(my_menu, tearoff=False)
 my_menu.add_cascade(label="Menu", menu=menu)
 menu.add_command(label="Quiz", command=quiz)
 menu.add_command(label="Word Jumble", command=word_jumble)
