@@ -1,15 +1,11 @@
 from tkinter import *
-from tkinter import ttk
 import yfinance as yf
-from datetime import datetime
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 def fetch_data():
     symbol = entry_symbol.get()
     df = fetch_stock_data(symbol)
-    if df is not None:
-        plot_stock_data(df)
+    if df is not None:  # Check if data is fetched successfully
+        show_earnings_calendar()  # Call show_earnings_calendar if data is fetched
 
 def fetch_stock_data(symbol):
     try:
@@ -23,16 +19,6 @@ def fetch_stock_data(symbol):
         print(f"Error fetching data: {e}")
         return None
 
-def plot_stock_data(df):
-    figure = Figure(figsize=(5, 4))
-    ax = figure.add_subplot(111)
-    ax.plot(df['Close'])
-    ax.set_title("Stock Price Over Time")
-    ax.set_xlabel("Time")
-    ax.set_ylabel("Closing Price")
-
-    plot_canvas.figure = figure
-    plot_canvas.draw()
 
 def show_earnings_calendar():
     symbol = entry_symbol.get()
@@ -66,20 +52,9 @@ root.geometry("800x600")
 label_symbol = Label(root, text="Enter Stock Symbol:")
 entry_symbol = Entry(root)
 button_fetch_data = Button(root, text="Fetch Data", command=fetch_data)
-button_earnings_calendar = Button(root, text="Earnings Calendar", command=show_earnings_calendar)
-plot_canvas = FigureCanvasTkAgg(Figure(figsize=(5, 4)), master=root)
-plot_canvas.get_tk_widget().pack(side=TOP, fill=BOTH, expand=1)
 
 label_symbol.pack(pady=10)
 entry_symbol.pack(pady=10)
 button_fetch_data.pack(pady=10)
-button_earnings_calendar.pack(pady=10)
-
-# Timeframe dropdown menu
-timeframes = ['Daily', 'Weekly', 'Monthly']
-timeframe_var = StringVar()
-timeframe_var.set(timeframes[0])  # Default to daily
-timeframe_menu = OptionMenu(root, timeframe_var, *timeframes)
-timeframe_menu.pack(pady=10)
 
 root.mainloop()

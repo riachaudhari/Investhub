@@ -1,5 +1,5 @@
 from tkinter import *
-from Flashcard import FlashcardApp # Ensure Flashcard.py is in the same directory or adjust the import path accordingly
+from Flashcard import FlashcardApp  # Ensure Flashcard.py is in the same directory or adjust the import path accordingly
 
 root = Tk()
 root.geometry("1550x1000")
@@ -36,6 +36,9 @@ def show_games():
 def show_notes():
     import Notes
 
+def show_notif():
+    import Notifications
+
 
 # Sidebar
 f1 = Frame(root, background="#003872", relief=SUNKEN)
@@ -55,7 +58,7 @@ s6 = Button(f1, text="Games", command=show_games, background="#001F3F", foregrou
 s6.grid(row=2, column=2, padx=10, pady=10)
 s7 = Button(f1, text="Notes", command=show_notes, background="#001F3F", foreground="white", font=("Helvetica", 15, "bold"), padx="50", pady="50")
 s7.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
-s8 = Button(f1, text="Notifications", background="#001F3F", foreground="white", font=("Helvetica", 15, "bold"), padx="50", pady="50")
+s8 = Button(f1, text="Notifications", command=show_notif, background="#001F3F", foreground="white", font=("Helvetica", 15, "bold"), padx="50", pady="50")
 s8.grid(row=3, column=1, columnspan=2, padx=10, pady=10)
 
 # Header
