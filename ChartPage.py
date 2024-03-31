@@ -30,7 +30,7 @@ def show_chart(symbol):
     fetch_data(symbol)
 
 root = Tk()
-root.title("Stock List")
+root.title("Chart Page")
 root.geometry("900x700")
 
 figure = Figure(figsize=(5, 4))
