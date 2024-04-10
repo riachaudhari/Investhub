@@ -35,7 +35,7 @@ mysql> SHOW COLUMNS FROM userinfo;
 ```
 
 ## DEMO
-https://github.com/Anuprita579/Investhub/assets/141035951/1fdf2447-b757-4f88-a98c-6b7821e345c7
+https://github.com/Anuprita579/Investhub/assets/141035951/4eb26ae1-5a20-44a4-ad65-fd4f0b55a329
 
 ## REPORT 
 [InvestHub_Report_D10A_Grp11.pdf](https://github.com/Anuprita579/Investhub/files/14920603/InvestHub_Report_D10A_Grp11.pdf)
