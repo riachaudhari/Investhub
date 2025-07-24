@@ -1,4 +1,41 @@
-# Stock Market Analysis
+📊 InvestHub
+A Python-based desktop application that simplifies stock market analysis and empowers users with data-driven investment insights.
+
+🔍 About the Project
+InvestHub is a user-friendly stock market analysis tool designed to assist investors, traders, and financial enthusiasts in understanding stock trends and making informed decisions. It provides real-time data visualization, stock comparisons, financial news, and educational resources — all in one place.
+
+✨ Key Features
+🔎 Search Stocks – View interactive line charts of price vs. time using historical stock data
+
+📈 Compare Stocks – Analyze two stocks side-by-side with zoom and reset functionalities
+
+🎓 Learn Tab – Access curated YouTube content for stock market learning
+
+📰 Live News – Get the latest financial news via integrated APIs
+
+🧠 Interactive Games – Engage with quizzes and word jumbles to test financial knowledge
+
+📝 Notes & Notifications – Add notes and receive custom notifications within the app
+
+🛠 Tech Stack
+Frontend & GUI: Python, Tkinter
+
+Data Handling: yfinance, matplotlib
+
+APIs: NewsAPI for live market news
+
+Other Tools: Custom quiz and word game logic, YouTube video embeds
+
+🎯 Future Scope
+📊 Machine learning for stock price prediction
+
+😊 Sentiment analysis from news & social media
+
+📁 Portfolio management and tracking
+
+📉 Enhanced dashboard for insights# Stock Market Analysis
+
+
 ## TABLES
 ```sql
 mysql> SHOW TABLES;
