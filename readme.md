@@ -1,4 +1,5 @@
 📊 InvestHub
+
 A Python-based desktop application that simplifies stock market analysis and empowers users with data-driven investment insights.
 
 🔍 About the Project
